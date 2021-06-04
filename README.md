@@ -27,3 +27,14 @@ docker run \
 
 
 sftp -P 2222 bruce@<localhost or IP address>
+
+
+backupscript.sh is a Bash script that will archive and compress data that needs to be persistent, to the specified directory in the script. This can be scheduled so the execution of the script is automated, using Crontab.
+
+Commands used:
+
+crontab -e
+
+0 0 * * * /root/backupscript.sh
+
+
