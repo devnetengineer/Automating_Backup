@@ -1,4 +1,4 @@
-#Running a containerized SFTP server to back up important files/directories#
+Running a containerized SFTP server to back up important files/directories
 
 The Docker image that will be used is:
 
@@ -24,7 +24,7 @@ Port mapping from the host and the container: 2222 (on the host) : 22 (on the co
 
 
 
-##Commands used:
+Commands used:
 
 docker run \
     -v /root/upload:/home/bruce/upload \
@@ -37,7 +37,7 @@ sftp -P 2222 bruce@<localhost or IP address>
 
 backupscript.sh is a Bash script that will archive and compress data that needs to be persistent, to the specified directory in the script. This can be scheduled so the execution of the script is automated, using Crontab.
 
-##Commands used:
+Commands used:
 
 crontab -e
 
