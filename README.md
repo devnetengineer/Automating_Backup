@@ -1,4 +1,4 @@
-Running a containerized SFTP server to back up important files/directories
+#Running a containerized SFTP server to back up important files/directories
 
 The Docker image that will be used is:
 
@@ -9,16 +9,22 @@ https://hub.docker.com/r/atmoz/sftp
 3. Use the bash script to back up the directory with persistent data on the host, which then would get backed up to the SFTP container 
 
 Environment variable that will be used:
+
 Username: bruce
+
 Password: food
+
 UID: 1001
+
 Directory where the archived and compressed backup will be uploaded to: /home/bruce/upload/
+
 Directory where the archvied and compressed backup will be uploaded from: /root/upload/
+
 Port mapping from the host and the container: 2222 (on the host) : 22 (on the container)
 
 
 
-Commands used:
+##Commands used:
 
 docker run \
     -v /root/upload:/home/bruce/upload \
@@ -31,7 +37,7 @@ sftp -P 2222 bruce@<localhost or IP address>
 
 backupscript.sh is a Bash script that will archive and compress data that needs to be persistent, to the specified directory in the script. This can be scheduled so the execution of the script is automated, using Crontab.
 
-Commands used:
+##Commands used:
 
 crontab -e
 
