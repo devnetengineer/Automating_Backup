@@ -1,4 +1,4 @@
-Running a containerized SFTP server to back up important files/directories
+# Running a containerized SFTP server to back up important files/directories
 
 The Docker image that will be used is:
 
@@ -8,7 +8,7 @@ https://hub.docker.com/r/atmoz/sftp
 2. Set the appropriate environment variables 
 3. Use the bash script to back up the directory with persistent data on the host, which then would get backed up to the SFTP container 
 
-Environment variable that will be used:
+## Environment variable that will be used:
 
 Username: bruce
 
@@ -24,7 +24,7 @@ Port mapping from the host and the container: 2222 (on the host) : 22 (on the co
 
 
 
-Commands used:
+## Commands used:
 
 docker run \
     -v /root/upload:/home/bruce/upload \
