@@ -1,4 +1,4 @@
-#Running a containerized SFTP server to back up important files/directories
+Running a containerized SFTP server to back up important files/directories
 
 The Docker image that will be used is:
 
